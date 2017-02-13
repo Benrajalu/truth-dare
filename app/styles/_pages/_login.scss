@@ -23,7 +23,7 @@
     vertical-align: middle;
     position: relative;
     background:#ffffff;
-    border-radius: 10px;
+    border-radius: 2px;
     padding:20px;
     text-align: center;
     overflow: hidden;
@@ -34,11 +34,11 @@
       display: block;
       width: 100vh;
       height: 100vh;
-      border-radius: 100%;
+      //border-radius: 100%;
       background:#f6f7fc;
       left:0;
       top:0;
-      transform: translateX(-50%) translateY(-20%);
+      transform: translateX(-50%) translateY(-20%) rotate(45deg);
       box-shadow: inset 2px 2px 10px rgba(0,0,0,0.1);
     }
     &:after{
@@ -92,7 +92,7 @@
         @include rounded('book', 12px, #5d6d91);
         &:focus, &:active{
           outline:0px;
-          border-color:#fe9dc0;
+          border-color:#FB5D9E;
         }
       }
       .button{
@@ -101,21 +101,28 @@
     }
   }
   .logo{
-    width: 70px;
-    height: 70px;
-    background: #fff;
-    border-radius:100%;
-    margin:0 auto 30px;
-    line-height: 70px;
-    box-shadow: 2px 0px 10px rgba(0,0,0,0.1);
-    img{
-      display: inline-block;
-      max-height: 65%;
-      margin:0 auto;
-      vertical-align: middle;
+    h2{
+      @include aqua(25px, #FB5D9E);
+      margin-bottom: 15px;
+      text-transform: uppercase;
       position: relative;
-      top:-2px;
-      left:0px;
+      padding-bottom: 15px;
+      &:after{
+        position: absolute;
+        content:'';
+        display: block;
+        width: 70px;
+        left:0;
+        right: 0;
+        bottom:1px;
+        margin:0 auto;
+        height: 3px;
+        background: rgb(251,93,158); /* Old browsers */
+        background: -moz-linear-gradient(-45deg,  rgba(251,93,158,1) 0%, rgba(75,41,120,1) 80%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg,  rgba(251,93,158,1) 0%,rgba(75,41,120,1) 80%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg,  rgba(251,93,158,1) 0%,rgba(75,41,120,1) 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb5d9e', endColorstr='#4b2978',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      }
     }
   }
 }

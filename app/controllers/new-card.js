@@ -7,8 +7,13 @@ export default Ember.Controller.extend({
     this.send('close');
     this.currentEmail = this.get('session').content.currentUser.email;
     this.user = this.get('log').login(this.currentEmail);
+    this.set('type', 'truth');
   },
   actions:{
+    selectType(value) {
+      console.log(value);
+      this.set('type', value);
+    },
     publishPost: function() {
       var button = document.getElementById('submit');
       if(this.get('task')){
@@ -18,6 +23,7 @@ export default Ember.Controller.extend({
         var newPost = store.createRecord('dare', {
           task: this.get('task'),
           id: new Date().getTime(),
+          type: scope.get('type'),
           unique: "task" + new Date().getTime(),
           active: false,
           author: this.get('user').email

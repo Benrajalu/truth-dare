@@ -11,6 +11,10 @@
           {{input type="hidden" class="title-input" required="true" value=author }}
           <fieldset>
             <label>What's the new task?</label>
+            <select name="type" id="type" onchange={{action "selectType" value="target.value"}}>
+              <option value="truth">Truth</option>
+              <option value="dare">Dare</option>
+            </select>
             {{tinymce-editor options=options required="true" value=task id="tinymce"}}
           </fieldset>
           <button type="submit" {{action "publishPost"}} class="button" id="submit">Add this one</button>

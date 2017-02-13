@@ -5,4 +5,5 @@ export default DS.Model.extend({
   task: DS.attr('string'),
   author: DS.attr('string'),
   unique: DS.attr('string'),
+  type: DS.attr('string'),
 });
