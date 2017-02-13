@@ -1,0 +1,21 @@
+<div class="content" id="login">
+  <div class="visible-content">
+    <form>
+      <div class="logo">
+        <img src="/assets/images/logo.png" alt="">
+      </div>
+      <div class="intro">
+        <h1 class="title">SIGN-IN</h1>
+        <p>You'll need to use your e-mail address and provided password to log-in this app.</p>
+      </div>
+      <label for="identification">Login</label>
+      {{input type="email" value=userEmail placeholder="Email" tabindex="1"}}
+      <label for="password">Password</label>
+      {{input type="password" value=userPassword placeholder="Password" tabindex="2"}}
+      {{#if errorMessage}}
+        <p class="error">{{errorMessage}}</p>
+      {{/if}}
+      <button type="submit" {{action "login" "password"}} class="button">Login</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{{#if session.isAuthenticated}}
+  <nav id="mainNav">
+    <div class="mobile-panel {{mobileMenu}}">
+      <ul class="main">
+        <li>{{#link-to "index"}}<span {{action 'closeMenu'}}>Ongoing card</span>{{/link-to}}</li>
+        <li>{{#link-to "listing"}}<span {{action 'closeMenu'}}>Check out the list</span>{{/link-to}}</li>
+        <li>{{#link-to "new-card"}}<span {{action 'closeMenu'}}>New card</span>{{/link-to}}</li>
+      </ul>
+      <ul class="secondary">
+        <li>Hello {{ user.name }} <button {{action 'invalidateSession'}} class="button tiny">Logout</button></li>
+      </ul>
+    </div>
+    <div class="toggles">
+      <button {{ action 'toggleMobile' }} class="mobileToggle {{mobileMenu}}"><i></i></button>
+      {{#link-to "index" class="logo"}}
+        <img src="/assets/images/logo.png" alt="" {{action 'closeMenu'}}>
+      {{/link-to}}
+    </div>
+  </nav>
+{{/if}}
+
+{{liquid-outlet}}

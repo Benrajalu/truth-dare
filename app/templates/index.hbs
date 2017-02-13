@@ -1,0 +1,11 @@
+{{#if session.isAuthenticated}}
+  <div id="index">
+    <div class="visible-content">
+      <div id="playfield">
+        <h1>Ongoing cards</h1>
+        {{#current-cards cards=sortedDares current=user.email paired=user.pair liveUser=user switch=(action "newActives" user) }}{{/current-cards}}
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+{{/if}}

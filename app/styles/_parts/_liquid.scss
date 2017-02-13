@@ -1,0 +1,22 @@
+.liquid-container{
+  @include transform(none !important);
+}
+.liquid-child{
+  > .content{
+    min-height: 100vh;
+  }
+}
+
+.liquid-animating{
+  #index{
+    .left-background{
+      //left:-200px;
+    }
+  }
+
+  #about{
+    .left-background{
+      //left:-200px;
+    }
+  }
+}

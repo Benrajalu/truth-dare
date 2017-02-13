@@ -1,0 +1,52 @@
+@mixin clearfix(){
+  &:before,
+  &:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+
+  &:after {
+      clear: both;
+  }
+
+  *zoom: 1;
+}
+
+@mixin PE(){
+  content:"";
+  display:block;
+}
+
+.cf{
+  @include clearfix;
+}
+
+// Font mixins
+  @mixin rounded($type, $size, $color){
+    font-size:$size;
+    color:$color;
+    @if $type == 'bold' {
+      font-family: 'gotham-rounded-bold';
+    }
+    @else if $type == 'book' {
+      font-family: 'gotham-rounded-book';
+    }
+    @else if $type == 'book-italic' {
+      font-family: 'gotham-rounded-book-italic';
+    }
+    @else if $type == 'light' {
+      font-family: 'gotham-rounded-light';
+    }
+    @else if $type == 'medium' {
+      font-family: 'gotham-rounded-medium';
+    } 
+    @else {
+      font-family:'gotham-rounded-medium';
+    }
+  }
+
+  @mixin aqua($size, $color){
+    font-size:$size;
+    color:$color;
+    font-family: 'aqua-grotesque';
+  }

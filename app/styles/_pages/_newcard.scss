@@ -1,0 +1,110 @@
+#newcard{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  &:before, &:after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    position: relative;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .visible-content{
+    display: inline-block;
+    width: 95%;
+    max-width: 900px;
+    height: auto;
+    padding:50px 30px 20px;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    background:#ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin:20px auto;
+    &:before{
+      content:"";
+      position: absolute;
+      z-index: 1;
+      display: block;
+      width: 100vh;
+      height: 100vh;
+      border-radius: 100%;
+      background:#f6f7fc;
+      left:0;
+      top:0;
+      transform: translateX(-50%) translateY(-20%);
+      box-shadow: inset 2px 2px 10px rgba(0,0,0,0.1);
+    }
+    h1, #playfield{
+      position: relative;
+      z-index: 2;
+    }
+    h1{
+      @include aqua(30px, #5d6d91);
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    label{
+      display: inline-block;
+      @include aqua(13px, #7085B3);
+      line-height: 35px;
+      border-top:2px solid rgba(254,98,160,1);
+      text-transform: uppercase;
+    }
+    .controls{
+      position: absolute;
+      top:0px;
+      right: 0px;
+      z-index: 3;
+      .button{
+        margin:0 10px 20px;
+      }
+    }
+    form{
+      max-width: 500px;
+      margin:0 auto 30px;
+      text-align: center;
+      .button{
+        margin-top: 30px;
+      }
+      .mce-panel{
+        background:#fff;
+        .mce-btn{
+          background:#fff;
+          border:1px solid transparent;
+        }
+        .mce-edit-area, .mceContentBody{
+          background: rgba(112,133,179,1);
+          background: -moz-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
+          background: -webkit-gradient(left top, right top, color-stop(0%, rgba(112,133,179,1)), color-stop(84%, rgba(123,141,179,1)), color-stop(100%, rgba(125,142,179,1)));
+          background: -webkit-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
+          background: -o-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
+          background: -ms-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
+          background: linear-gradient(to right, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7085b3', endColorstr='#7d8eb3', GradientType=1 );
+          padding:0 20px;
+        }
+      }
+    }
+
+
+    @media only screen and (max-width: 800px){
+      margin:20px auto;
+      text-align: center;
+      h1, h2{
+        text-align: center;
+      }
+      padding:30px 20px 20px;
+      .controls{
+        position: static;
+        text-align: center;
+        margin:-10px auto 20px;
+      }
+    }
+  }
+}

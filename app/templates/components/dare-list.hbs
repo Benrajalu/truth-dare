@@ -1,0 +1,17 @@
+<ul class="card-listing">
+  {{#each list as |dare|}}
+    <li class="card">
+      <div class="front">
+        <div class="contents">
+          {{{dare.task}}}
+          {{#if dare.active}}
+            <div class="status active">Active</div>
+          {{ else }}
+            <button {{ action "deleteRecord" dare.id }} class="status button remove">Remove</button>
+          {{/if}}
+        </div>
+      </div>
+    </li>
+  {{/each}}
+</ul>
+{{yield}}

@@ -1,0 +1,116 @@
+#index{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  &:before, &:after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    position: relative;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .visible-content{
+    display: inline-block;
+    width: 95%;
+    max-width: 900px;
+    height: auto;
+    padding:50px 30px 30px;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    background:#ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    &:before{
+      content:"";
+      position: absolute;
+      z-index: 1;
+      display: block;
+      width: 100vh;
+      height: 100vh;
+      border-radius: 100%;
+      background:#f6f7fc;
+      left:0;
+      top:0;
+      transform: translateX(-50%) translateY(-20%);
+      box-shadow: inset 2px 2px 10px rgba(0,0,0,0.1);
+    }
+    h1, #playfield{
+      position: relative;
+      z-index: 2;
+    }
+    h1{
+      @include aqua(30px, #5d6d91);
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    #pair{
+      position: relative;
+      height: 288px;
+      display: inline-block;
+      vertical-align: middle;
+      padding:0 0px;
+      text-align: justify;
+      width: 100%;
+      margin-bottom: 10px;
+      &:after{
+        content:"";
+        display: inline-block;
+        width: 100%;
+      }
+      .entry{
+        width: 48%;
+        vertical-align: middle;
+        display: inline-block;
+        > h3{
+          display: inline-block;
+          @include aqua(13px, #7085B3);
+          line-height: 35px;
+          border-top:2px solid rgba(254,98,160,1);
+          text-transform: uppercase;
+        }
+      }
+      .card{
+        position: relative;
+        z-index: 1;
+        &.active{
+          z-index: 2;
+        }
+      }
+
+    }
+    .controls{
+      text-align: center;
+      .button{
+        margin:0 10px 20px;
+      }
+    }
+
+    @media only screen and (max-width: 800px){
+      margin:20px auto;
+      padding:30px 20px 20px;
+      h1{
+        text-align: center;
+      }
+      #pair{
+        height: auto;
+        .entry{
+          width: 100%;
+          display: block;
+          max-width: 550px;
+          margin:0 auto 30px;
+          .card .contents{
+            font-size: 18px;
+            p{
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
