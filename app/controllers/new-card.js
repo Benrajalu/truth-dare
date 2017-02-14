@@ -33,6 +33,7 @@ export default Ember.Controller.extend({
           document.getElementById('new-post-form').reset();
           scope.set('task', '');
           scope.set('id', '');
+          scope.set('type', 'truth');
           scope.transitionToRoute('listing');
         }, function() {
           button.innerHTML= "Well it's a dud";

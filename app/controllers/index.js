@@ -29,13 +29,26 @@ export default Ember.Controller.extend({
       var players=[params.email, params.pair];
       players.forEach(function(filter){
         scope.get('store').query('dare', { orderBy: 'author', equalTo: filter }).then(function(dare){
-          var upperLimit = dare.get('length'),
-              randomNumber = getRandomInt(0, upperLimit-1);
-          dare.forEach(function(data, index){
-            if(index === randomNumber){
+          var truths =  dare.filterBy('type', 'truth'),
+              truthsLength = truths.get('length'),
+              dares = dare.filterBy('type', 'dare'),
+              dareLength = dares.get('length');
+
+          var randomTruth = getRandomInt(0, truthsLength-1),
+              randomDare = getRandomInt(0, dareLength-1);
+
+          truths.forEach(function(data, index){
+            if(index === randomTruth){
               data.set('active', true);
             }
           });
+
+          dares.forEach(function(data, index){
+            if(index === randomDare){
+              data.set('active', true);
+            }
+          });
+
           dare.save();
         });
       });
