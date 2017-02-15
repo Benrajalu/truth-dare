@@ -1,11 +1,7 @@
 #listing{
   .visible-content{
-    padding:40px 30px;
-    height: auto;
-    max-height: 999vh;
-    margin:20px auto;
     text-align: left;
-   .controls{
+    .controls{
       position: absolute;
       top:0px;
       right: 0px;
@@ -14,6 +10,7 @@
         margin:0 10px 20px;
       }
     }
+
     .card-listing{
       text-align: justify;
       width: 100%;
@@ -58,10 +55,8 @@
       }
     }
 
-
     @media only screen and (max-width: 800px){
       text-align: center;
-      padding:30px 20px 20px;
       h1, h2{
         text-align: center;
       }

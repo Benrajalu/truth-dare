@@ -1,8 +1,6 @@
 #newcard{
   .visible-content{
-    padding:50px 30px 20px;
     text-align: left;
-    max-height:550px;
     label{
       display: inline-block;
       @include aqua(13px, #7085B3);
@@ -48,9 +46,7 @@
 
 
     @media only screen and (max-width: 800px){
-      margin:20px auto;
       text-align: center;
-      padding:30px 20px 20px;
       h1, h2{
         text-align: center;
       }

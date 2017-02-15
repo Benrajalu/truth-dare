@@ -15,17 +15,18 @@
     vertical-align: middle;
   }
   .visible-content{
+    margin:20px auto;
     display: inline-block;
     width: 95%;
     max-width: 900px;
-    height: 80vh;
+    height: auto;
     max-height: inherit;
     min-height: 500px;
     vertical-align: middle;
     position: relative;
     background:#ffffff;
     border-radius: 2px;
-    padding:20px;
+    padding:40px 30px;
     text-align: center;
     overflow: hidden;
     &:before{
@@ -35,7 +36,6 @@
       display: block;
       width: 100vh;
       height: 100vh;
-      //border-radius: 100%;
       background:#f6f7fc;
       left:0;
       top:0;
@@ -122,8 +122,7 @@
   }
 
   @media only screen and (max-width: 800px){
-    margin:20px auto;
-    padding:30px 20px 20px;
+    padding:30px 20px;
     h1{
       text-align: center;
     }
