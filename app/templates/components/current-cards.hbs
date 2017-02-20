@@ -1,28 +1,16 @@
 <div id="pair">
   <div class="entry">
-    <h3>{{liveUser.name}} should do...</h3>
-    {{#each pairedActive as |card|}}
-      <div class="card pairedCard {{pairCard}}">
-        <div class="front">
-          <div class="contents">
-            {{{card.task}}}
-          </div>
-        </div>
-      </div>
-    {{/each}}
+    <h3>What will {{liveUser.name}} pick?</h3>
+    <div class="choices">
+      {{#card-item values=pairedActive author=liveUser.name }}{{/card-item}}
+    </div>
   </div>
 
   <div class="entry">
-    <h3>{{liveUser.pairName}} should do...</h3>
-    {{#each playerActive as |card|}}
-      <div class="card pairedCard {{pairCard}}">
-        <div class="front">
-          <div class="contents">
-            {{{card.task}}}
-          </div>
-        </div>
-      </div>
-    {{/each}}
+    <h3>What will {{liveUser.pairName}} pick?</h3>
+    <div class="choices">
+      {{#card-item values=playerActive author=liveUser.pairName }}{{/card-item}}
+    </div>
   </div>
 </div>
 

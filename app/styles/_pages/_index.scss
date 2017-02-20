@@ -17,19 +17,14 @@
       width: 48%;
       vertical-align: middle;
       display: inline-block;
+      text-align: center;
       > h3{
         display: inline-block;
         @include aqua(13px, #7085B3);
         line-height: 35px;
         border-top:2px solid rgba(254,98,160,1);
         text-transform: uppercase;
-      }
-    }
-    .card{
-      position: relative;
-      z-index: 1;
-      &.active{
-        z-index: 2;
+        margin-bottom: 20px;
       }
     }
   }
@@ -39,6 +34,16 @@
       margin:0 10px 20px;
     }
   }
+
+  .card{
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    &.active{
+      z-index: 2;
+    }
+  }
+
 
   @media only screen and (max-width: 800px){
     #pair{
