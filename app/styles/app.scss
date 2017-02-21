@@ -186,6 +186,13 @@ body, html{
       }
     }
   }
+  &.full{
+    .choice{
+      &:before{
+        display: none;
+      }
+    }
+  }
 }
 
 .tinyMCE-editor{

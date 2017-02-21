@@ -1,9 +1,10 @@
 <ul class="card-listing">
   {{#each list as |dare|}}
-    <li class="card">
-      <div class="front">
+    <li class="card full">
+      <div class="choice active">
         <div class="contents">
-          {{{dare.task}}}
+          <span>{{{dare.task}}}</span>
+          <div class="type">{{dare.type}}</div>
           {{#if dare.active}}
             <div class="status active">Active</div>
           {{ else }}

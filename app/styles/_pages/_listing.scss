@@ -24,12 +24,21 @@
         vertical-align: middle;
         display: inline-block;
         margin-bottom: 20px;
+        .type{
+          position: absolute;
+          top:10px;
+          left:10px;
+          @include aqua(12px, #7085B3);
+          text-transform: uppercase;
+          line-height: 20px;
+        }
         .status{
           position: absolute;
           top:10px;
           right:10px;
+          line-height: 20px;
           &.active{
-            @include aqua(12px, #fff);
+            @include aqua(12px, #7085B3);
             text-transform: uppercase;
             &:before{
               content:"";
