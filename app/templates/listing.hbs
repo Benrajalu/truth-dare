@@ -8,8 +8,8 @@
       </div>
 
       {{#liquid-if currentPlayer class="activeList"}}
-        <h2>{{user.name}}'s cards <button class="button tiny" {{action 'toggleList'}}>Check {{user.pairName}}'s list</button></h2>
-        {{#dare-list data=myList  filter=user.email }}{{/dare-list}}
+        <h2>Your cards <button class="button tiny" {{action 'toggleList'}}>Check {{user.pairName}}'s list</button></h2>
+        {{#dare-list data=myList  filter=user.email removeRights="true" }}{{/dare-list}}
       {{else}}
         <h2>{{user.pairName}}'s cards <button class="button tiny" {{action 'toggleList'}}>Check {{user.name}}'s list</button></h2>
         {{#dare-list data=myList  filter=user.pair }}{{/dare-list}}

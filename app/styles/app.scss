@@ -40,10 +40,9 @@ body, html{
 .button{
   background:#fff;
   padding:10px 40px;
-  border-radius: 20px;
+  border-radius: 3px;
   @include rounded('medium', 13px, #5d6d91);
-  border:0px;
-  box-shadow: 2px 0px 10px rgba(0,0,0,0.1);
+  border:1px solid rgba(254,98,160,1);
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
@@ -150,11 +149,6 @@ body, html{
       width: 100%;
       background:#f2f2f2;
     }
-    &:hover{
-      &:before{
-        height: 105%;
-      }
-    }
     &:first-child{
       &:before{
         bottom:0px;
@@ -196,18 +190,11 @@ body, html{
 }
 
 .tinyMCE-editor{
-  background: rgba(112,133,179,1);
-  background: -moz-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(112,133,179,1)), color-stop(84%, rgba(123,141,179,1)), color-stop(100%, rgba(125,142,179,1)));
-  background: -webkit-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
-  background: -o-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
-  background: -ms-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
-  background: linear-gradient(to right, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7085b3', endColorstr='#7d8eb3', GradientType=1 );
-  @include rounded("light", 20px, #f2f2f2);
+  background: #fff;
+  @include rounded(bold, 15px, #7085B3);
   padding:20px 0px;
   p{
-    @include rounded("light", 20px, #f2f2f2);
+    @include rounded(bold, 15px, #7085B3);
     line-height: 1.3;
   }
   a{

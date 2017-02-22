@@ -8,7 +8,9 @@
           {{#if dare.active}}
             <div class="status active">Active</div>
           {{ else }}
-            <button {{ action "deleteRecord" dare.id }} class="status button remove">Remove</button>
+            {{#if removeRights }}
+              <button {{ action "deleteRecord" dare.id }} class="status button remove">Remove</button>
+            {{/if}}
           {{/if}}
         </div>
       </div>

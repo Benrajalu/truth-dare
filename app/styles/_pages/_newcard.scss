@@ -19,8 +19,48 @@
     }
     form{
       max-width: 500px;
-      margin:0 auto 30px;
+      margin:15px auto 30px;
       text-align: center;
+      .wrapper{
+        text-align: center;
+        .select-box{
+          display: inline-block;
+          vertical-align: middle;
+          background:#fff;
+          position: relative;
+          margin:0 auto 20px;
+          &:after{
+            content:"";
+            border-top:5px solid rgba(254,98,160,1);
+            border-left:6px solid transparent;
+            border-right:6px solid transparent;
+            position: absolute;
+            right:10px;
+            top:50%;
+            transform:translateY(-50%);
+            z-index: 1;
+          }
+          #type{
+            position: relative;
+            z-index: 2;
+            display: block;
+            min-width: 150px;
+            height: 35px;
+            line-height: 35px;
+            border:1px solid #cacaca;
+            background: transparent;
+            @include rounded(bold, 15px, #7085B3);
+            -webkit-appearance:none;
+            -moz-appearance:none;
+            padding:0 30px 0 10px;
+            border-radius: 0px;
+            &:focus{
+              outline:0;
+              border-color:rgba(254,98,160,1);
+            }
+          }
+        }
+      }
       .button{
         margin-top: 30px;
       }
@@ -31,14 +71,7 @@
           border:1px solid transparent;
         }
         .mce-edit-area, .mceContentBody{
-          background: rgba(112,133,179,1);
-          background: -moz-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
-          background: -webkit-gradient(left top, right top, color-stop(0%, rgba(112,133,179,1)), color-stop(84%, rgba(123,141,179,1)), color-stop(100%, rgba(125,142,179,1)));
-          background: -webkit-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
-          background: -o-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
-          background: -ms-linear-gradient(left, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
-          background: linear-gradient(to right, rgba(112,133,179,1) 0%, rgba(123,141,179,1) 84%, rgba(125,142,179,1) 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7085b3', endColorstr='#7d8eb3', GradientType=1 );
+          background: #fff;
           padding:0 20px;
         }
       }
