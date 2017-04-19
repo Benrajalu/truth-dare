@@ -99,47 +99,63 @@ body, html{
   background:#fff;
   text-align: center;
   border-radius:4px;
-  &:hover{
-    @include transform(translateY(-2px));
-  }
+  position: relative;
+  overflow: hidden;
   .contents{
-    height: 0px;
+    height: 320px;
     transition:all 200ms ease-out;
     overflow: hidden;
-    line-height: 20px;
+    line-height: 320px;
     position: relative;
-    z-index: 2;
-    line-height: 160px;
+    z-index: 1;
     span{
+      display: inline-block;
+      vertical-align: middle;
       transition:all 200ms ease-out;
       @include rounded(bold, 15px, #7085B3);
+      line-height: 1.3;
+      padding:0 15px;
     }
   }
   .title{
-    height: 200px;
-    line-height: 200px;
-    position: relative;
+    top:0px;
+    left:0px;
+    height: 100%;
+    position: absolute;
     z-index: 2;
     width: 100%;
-    background: transparent;
     border:0px;
     @include rounded(bold, 15px, #7085B3);
     text-transform: uppercase;
     cursor: pointer;
     @include transition(all 200ms ease-out);
+    background: transparent;
+    background: #FFF;
+    opacity:0.9;
     &:focus{
       outline:0;
     }
     span{
-      padding:8px 10px 6px;
-      border-radius: 3px;
-      border:1px solid rgb(251,93,158);
-      background:#fff;
+      display: inline-block;
+      position: absolute;
+      bottom:20px;
+      right: 0px;
+      width: 100%;
       transition:all 200ms ease-out;
     }
     &:hover span{
-      padding:10px 12px 8px;
-      font-size: 16px;
+      bottom:23px;
+    }
+
+    + .contents{
+      filter: blur(2px);
+    }
+    &.active{
+      opacity:0;
+      top:100%;
+      + .contents{
+        filter: blur(0px);
+      }
     }
   }
   .choice{

@@ -1,0 +1,8 @@
+<div class="card type-{{card.type}}">
+  <button class="title {{toggled}}" onclick={{ action "toggleCard" }}>
+    <span>Reveal the {{card.type}}</span>
+  </button>
+  <div class="contents card-contents">
+    <span>{{{card.task}}}</span>
+  </div>
+</div>

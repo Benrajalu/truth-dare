@@ -40,4 +40,11 @@ export default function(){
     this.use('fade', {duration: 250}),
     this.reverse('fade', {duration: 250})
   );
+
+  this.transition(
+    this.hasClass('cardsDance'),
+    this.toValue(true),
+    this.use('toLeft', {duration: 250}),
+    this.reverse('toRight', {duration: 250})
+  );
 }

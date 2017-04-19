@@ -27,6 +27,80 @@
         margin-bottom: 20px;
       }
     }
+    .options{
+      display: block;
+      width: 90%;
+      max-width: 320px;
+      margin:0 auto 15px;
+      background:#fff;
+      position: relative;
+      overflow: hidden;
+      button{
+        float: left;
+        width: 50%;
+        border:2px solid #f2f2f2;
+        border-radius:0px;
+        position: relative;
+        z-index: 2;
+        background: transparent;
+        @include rounded(bold, 11px, #7085B3);
+        padding:10px 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:focus{
+          outline: 0;
+        }
+        &:first-child{
+          border-right: 0px;
+        }
+        &:last-child{
+          border-left: 0px;
+        }
+      }
+      &:before{
+        content:"";
+        width: 50%;
+        position: absolute;
+        top:0px;
+        left:0px;
+        transition:all 200ms ease-out;
+        height: 100%;
+        transform:skewX(-10deg);
+        background: rgb(251,93,158); /* Old browsers */
+        background: -moz-linear-gradient(-45deg,  rgba(251,93,158,1) 0%, rgba(75,41,120,1) 80%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg,  rgba(251,93,158,1) 0%,rgba(75,41,120,1) 80%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg,  rgba(251,93,158,1) 0%,rgba(75,41,120,1) 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb5d9e', endColorstr='#4b2978',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        z-index: 1;
+      }
+      &:after{
+        clear: both;
+        float: none;
+        content:"";
+        display: block;
+      }
+      &.truth{
+        button:first-child{
+          color:#fff;
+        }
+      }
+      &.dare{
+        button:last-child{
+          color:#fff;
+        }
+        &:before{
+          left:50%;
+          transform:skewX(10deg);
+        }
+      }
+    }
+    .cards{
+      width: 90%;
+      max-width: 320px;
+      overflow: hidden;
+      margin:0 auto;
+      position: relative;
+    }
   }
   .controls{
     text-align: center;

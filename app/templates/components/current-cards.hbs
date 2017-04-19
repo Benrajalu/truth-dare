@@ -2,14 +2,14 @@
   <div class="entry">
     <h3>What will {{liveUser.name}} pick?</h3>
     <div class="choices">
-      {{#card-item values=pairedActive author=liveUser.name }}{{/card-item}}
+      {{#card-item truth=pairedTruth dare=pairedDare author=liveUser.name }}{{/card-item}}
     </div>
   </div>
 
   <div class="entry">
     <h3>What will {{liveUser.pairName}} pick?</h3>
     <div class="choices">
-      {{#card-item values=playerActive author=liveUser.pairName }}{{/card-item}}
+      {{#card-item truth=playerTruth dare=playerDare author=liveUser.pairName }}{{/card-item}}
     </div>
   </div>
 </div>

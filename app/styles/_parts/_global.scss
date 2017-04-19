@@ -29,6 +29,9 @@
     padding:40px 30px;
     text-align: center;
     overflow: hidden;
+    .liquid-container, .ember-view{
+      min-height: auto;
+    }
     &:before{
       content:"";
       position: absolute;

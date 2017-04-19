@@ -1,13 +1,19 @@
-<div class="card" id={{author}}>
-  {{#each values as |card|}}
-    <div class="choice type-{{card.type}}">
-      <button class="title {{ toggled }}" {{ action "toggleCard" card.type author }}>
-        <span>The {{card.type}}</span>
-      </button>
-      <div class="contents card-contents">
-        <span>{{{card.task}}}</span>
-      </div>
-    </div>
-  {{/each}}
+<div class="selector" id={{author}}>
+  <div class="options {{current}}">
+    <button class="toggle" {{action "switchCurrent" "truth"}}>Truth</button>
+    <button class="toggle" {{action "switchCurrent" "dare"}}>Dare</button>
+  </div>
+
+  <div class="cards">
+    {{#liquid-if currentIsTruth class="cardsDance"}}
+      {{#each truth as |card|}}
+        {{#single-card card=card }}{{/single-card}}
+      {{/each}}
+    {{else}}
+      {{#each dare as |otherCard|}}
+        {{#single-card card=otherCard }}{{/single-card}}
+      {{/each}}
+    {{/liquid-if}}
+  </div>
 </div>
 {{yield}}
