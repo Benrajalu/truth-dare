@@ -33,4 +33,11 @@ export default function(){
     this.use('toRight', {duration: 250}),
     this.reverse('toLeft', {duration: 250})
   );
+
+  this.transition(
+    this.hasClass('menuOn'),
+    this.toValue(true),
+    this.use('fade', {duration: 250}),
+    this.reverse('fade', {duration: 250})
+  );
 }

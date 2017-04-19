@@ -18,12 +18,18 @@ body, html{
   position: relative;
   display:block;
   height: 100%;
-  > .ember-view{
-    min-height: 100vh;
-  }
   .liquid-container, .liquid-child{
+    position: static;
+    &.menuOn{
+      transform: none !important;
+    }
+  }
+  .mainContents{
     min-height: 100vh;
-    overflow: auto;
+    .liquid-container, .liquid-child{
+      min-height: 100vh;
+      overflow: auto;
+    }
   }
 }
 

@@ -1,4 +1,4 @@
-{{#if session.isAuthenticated}}
+{{#liquid-if session.isAuthenticated class='menuOn'}}
   <nav id="mainNav">
     <div class="mobile-panel {{mobileMenu}}">
       <ul class="main">
@@ -17,6 +17,6 @@
       {{/link-to}}
     </div>
   </nav>
-{{/if}}
+{{/liquid-if}}
 
-{{liquid-outlet}}
+{{liquid-outlet class='mainContents'}}

@@ -15,11 +15,13 @@ export default Ember.Controller.extend({
   },
   actions: {
     invalidateSession() {
+      this.set('mobileMenu', 'passive');
       this.get('logger').logout();
       this.get('session').close();
       this.transitionToRoute('login');
     },
     logOut() {
+      this.set('mobileMenu', 'passive');
       this.get('logger').logout();
     },
     toggleMobile() {
