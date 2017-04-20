@@ -115,12 +115,32 @@
   }
   h2{
     display: inline-block;
-    @include aqua(13px, #7085B3);
+    @include aqua(20px, #5d6d91);
     line-height: 35px;
-    border-top:2px solid rgba(254,98,160,1);
     text-transform: uppercase;
+    margin-bottom: 30px;
     .button{
-      margin-bottom: 20px;
+      vertical-align: middle;
+    }
+  }
+
+  h3{
+    @include aqua(16px, #7085B3);
+    text-transform: uppercase;
+    margin:30px auto 20px;
+    text-align: center;
+    position: relative;
+    &:before{
+      content:"";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background:rgba(254,98,160,1);
+      position: absolute;
+      top:-15px;
+      left:0;
+      right:0;
+      margin:0 auto;
     }
   }
 
