@@ -4,7 +4,7 @@
       <div id="playfield">
         <h3>Truth'o'Dare</h3>
         <h1>Ongoing game</h1>
-        <p>{{#link-to "help"}}Need help? Check out how to play!{{/link-to}}</p>
+        <p class="intro">{{#link-to "help"}}Need help? Check out how to play!{{/link-to}}</p>
         {{#current-cards cards=sortedDares current=user.email paired=user.pair liveUser=user switch=(action "newActives" user) }}{{/current-cards}}
         {{outlet}}
       </div>
