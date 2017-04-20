@@ -25,6 +25,10 @@
         border-top:2px solid rgba(254,98,160,1);
         text-transform: uppercase;
         margin-bottom: 20px;
+        margin-top: 0px;
+        &:before{
+          display: none;
+        }
       }
     }
     .options{

@@ -60,6 +60,7 @@ body, html{
   top:0px;
   white-space: nowrap;
   display: inline-block;
+  line-height: 1;
   &:after{
     content:"\2192";
     color:#FB5D9E;

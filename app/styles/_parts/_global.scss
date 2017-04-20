@@ -112,6 +112,13 @@
     @include aqua(30px, #5d6d91);
     text-transform: uppercase;
     margin-bottom: 40px;
+    + p{
+      margin-top:-30px;
+      margin-bottom: 40px;
+      a{
+        @include rounded(bold,15px, rgba(254,98,160,1));
+      }
+    }
   }
   h2{
     display: inline-block;
@@ -148,6 +155,29 @@
     padding:0px;
     h1{
       text-align: center;
+    }
+  }
+}
+
+
+.copy-contents{
+  text-align: left;
+  img{
+    display: block;
+    max-width: 100%;
+    margin:0 auto 30px;
+  }
+  h4{
+    @include rounded(bold, 16px, #5d6d91);
+    margin-bottom: 15px;
+    margin-top: 30px;
+  }
+  p{
+    @include rounded('book', 14px, #5d6d91);
+    margin-bottom: 20px;
+    line-height: 1.3;
+    a{
+      color:rgba(254,98,160,1);
     }
   }
 }

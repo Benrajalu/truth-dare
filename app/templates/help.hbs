@@ -4,6 +4,42 @@
       <div id="playfield">
         <h3>Truth'o'Dare</h3>
         <h1>How to play ?</h1>
+        <div class="copy-contents">
+          <h4>What is this ?</h4>
+          <p>This is a simuated app for a Truth or Dare kind of game. I made this to get to know Ember.js a bit better.</p>
+
+          <h4>How simulated is it?</h4>
+          <p>Well, you can't create or manage accounts for one. There are only two users and they have been "paired by force" in the database. The real web-app would offer subsciption and match-making services which I don't plan on doing for now.</p>
+          <p>It is however pretty much functionnal beside this. You can create new tasks, either dares or truths. You can randomize a new pick for each involved player. You can remove tasks you're no longer happy with...provided you're the one who created them. We wouldn't want anybody cheating, would we?</p>
+
+          <h4>So what do I do?!</h4>
+          <p>You can play right away if you want to. Just go to the {{#link-to "index"}}homepage{{/link-to}} and you're free to play. The app is designed to let the two players play on the same screen. Here, you're John. The other player is Jim. Either can pick whether they're feeling like trying a truth or a dare, then reveal what the task is.</p>
+          <p>If you're unhappy with the draw or want to move on to the next phase, you'll just have to hit that "New game!" button.</p>
+
+          <img src="/assets/images/home-screenshot.jpg" alt="" />
+
+          <p>You may wish to remove tasks you're now longer very proud of. You can do this in the {{#link-to "listing"}}"Available tasks"{{/link-to}} section, which you can find both in the main menu (bottom right of the screen) and through buttons available on each screens. Keep in mind, only tasks from YOUR list are removeable by you. You'll need to properly negotiate with the other player if you want to see scandalous stuff gone from theirs....or impose equally punishing tasks in yours.</p>
+
+          <h4>Ok but how do I add stuff?</h4>
+
+          <p>You can head out straight to the {{#link-to "listing"}}"Add tasks"{{/link-to}} section, also available in the main menu or from buttons throughout the app. There you'll find a basic form that enables you to write a new task, assign it a type (truth or dare) and submit it.</p>
+
+          <p>Keep in mind this is a professional demo. Keep it PG-13.</p>
+
+          <img src="/assets/images/new-card.jpg" alt="" />
+
+          <div class="controls">
+            {{#link-to "index" class="button"}}Let's play!{{/link-to}}
+            {{#link-to "listing" class="button"}}Available tasks{{/link-to}}
+            {{#link-to "new-card" class="button"}}Add a task{{/link-to}}
+          </div>
+
+          <div class="controls">
+            <a href="http://www.benrajalu.net/hire-me" target="_blank" class="button">Let's get in touch!</a>
+          </div>
+
+
+        </div>
         {{outlet}}
       </div>
     </div>
