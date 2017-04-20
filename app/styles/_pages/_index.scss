@@ -47,6 +47,7 @@
         padding:10px 5px;
         text-transform: uppercase;
         cursor: pointer;
+        transition:200ms ease-out;
         &:focus{
           outline: 0;
         }

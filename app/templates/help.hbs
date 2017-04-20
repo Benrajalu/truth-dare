@@ -1,0 +1,11 @@
+{{#if session.isAuthenticated}}
+  <div id="index" class="page">
+    <div class="visible-content">
+      <div id="playfield">
+        <h3>Truth'o'Dare</h3>
+        <h1>How to play ?</h1>
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+{{/if}}

@@ -11,7 +11,8 @@ export default Ember.Component.extend({
     const profile = this.get('filter');
     const originalList = this.get('data');
     this.set('data', originalList);
-    this.set('list', this.data.filterBy('author', profile).sortBy('type'));
+    this.set('dares', this.data.filterBy('author', profile).sortBy('type').filterBy('type', 'dare'));
+    this.set('truths', this.data.filterBy('author', profile).sortBy('type').filterBy('type', 'truth'));
   },
   actions:{
     deleteRecord(id){

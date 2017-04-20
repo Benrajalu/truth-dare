@@ -1,5 +1,26 @@
+<h3>The dares</h3>
 <ul class="card-listing">
-  {{#each list as |dare|}}
+  {{#each dares as |dare|}}
+    <li class="card full">
+      <div class="choice active">
+        <div class="contents">
+          <span>{{{dare.task}}}</span>
+          <div class="type">{{dare.type}}</div>
+          {{#if dare.active}}
+            <div class="status active">Active</div>
+          {{ else }}
+            {{#if removeRights }}
+              <button {{ action "deleteRecord" dare.id }} class="status button remove">Remove</button>
+            {{/if}}
+          {{/if}}
+        </div>
+      </div>
+    </li>
+  {{/each}}
+</ul>
+<h3>The truths</h3>
+<ul class="card-listing">
+  {{#each truths as |dare|}}
     <li class="card full">
       <div class="choice active">
         <div class="contents">

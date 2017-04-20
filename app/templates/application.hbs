@@ -2,9 +2,10 @@
   <nav id="mainNav">
     <div class="mobile-panel {{mobileMenu}}">
       <ul class="main">
-        <li>{{#link-to "index"}}<span {{action 'closeMenu'}}>Ongoing card</span>{{/link-to}}</li>
-        <li>{{#link-to "listing"}}<span {{action 'closeMenu'}}>Check out the list</span>{{/link-to}}</li>
-        <li>{{#link-to "new-card"}}<span {{action 'closeMenu'}}>New card</span>{{/link-to}}</li>
+        <li>{{#link-to "index"}}<span {{action 'closeMenu'}}>Ongoing game</span>{{/link-to}}</li>
+        <li>{{#link-to "listing"}}<span {{action 'closeMenu'}}>All available tasks</span>{{/link-to}}</li>
+        <li>{{#link-to "new-card"}}<span {{action 'closeMenu'}}>Add a task</span>{{/link-to}}</li>
+        <li>{{#link-to "help"}}<span {{action 'closeMenu'}}>How to play</span>{{/link-to}}</li>
       </ul>
       <ul class="secondary">
         <li>Hello {{ user.name }} <button {{action 'invalidateSession'}} class="button tiny">Logout</button></li>
