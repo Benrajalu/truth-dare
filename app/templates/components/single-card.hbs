@@ -1,8 +1,13 @@
-<div class="card type-{{card.type}}">
-  <button class="title {{toggled}}" onclick={{ action "toggleCard" }}>
-    <span>Reveal the {{card.type}}</span>
-  </button>
-  <div class="contents card-contents">
+<div class="card full">
+  <div class="contents">
     <span>{{{card.task}}}</span>
+    <div class="type">{{card.type}}</div>
+    {{#if card.active}}
+      <div class="status active">Active</div>
+    {{ else }}
+      {{#if removeRights }}
+        <button {{ action "removeThis" card.id }} class="status button remove">Remove</button>
+      {{/if}}
+    {{/if}}
   </div>
 </div>

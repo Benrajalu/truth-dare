@@ -7,11 +7,11 @@
   <div class="cards">
     {{#liquid-if currentIsTruth class="cardsDance"}}
       {{#each truth as |card|}}
-        {{#single-card card=card }}{{/single-card}}
+        {{#game-pair card=card }}{{/game-pair}}
       {{/each}}
     {{else}}
       {{#each dare as |otherCard|}}
-        {{#single-card card=otherCard }}{{/single-card}}
+        {{#game-pair card=otherCard }}{{/game-pair}}
       {{/each}}
     {{/liquid-if}}
   </div>

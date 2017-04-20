@@ -3,10 +3,11 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   init(){
     this._super(...arguments);
+    this.set('toggled', '');
   },
   actions:{
-    removeThis(id){
-      this.sendAction('removeThis', id);
+    toggleCard(){
+      this.set('toggled', 'active');
     }
   }
 });
