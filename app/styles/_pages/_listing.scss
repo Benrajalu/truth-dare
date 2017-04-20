@@ -14,45 +14,29 @@
     .card-listing{
       text-align: justify;
       width: 100%;
+      display: flex;
+      flex-wrap:wrap;
+      justify-content:space-bewteen;
+      align-item:flex-start;
       &:after{
         content:"";
-        display: inline-block;
-        width: 100%;
+        display:block;
+        flex-grow:2;
       }
-      li{
-        width: 49%;
+      .ember-view{
+        width: 32%;
         vertical-align: middle;
         display: inline-block;
         margin-bottom: 20px;
-        .type{
-          position: absolute;
-          top:10px;
-          left:10px;
-          @include aqua(12px, #7085B3);
-          text-transform: uppercase;
-          line-height: 20px;
+        margin-right: 1%;
+        &:nth-child(3n){
+          margin-right: 0px;
         }
-        .status{
-          position: absolute;
-          top:10px;
-          right:10px;
-          line-height: 20px;
-          &.active{
-            @include aqua(12px, #7085B3);
-            text-transform: uppercase;
-            &:before{
-              content:"";
-              display: inline-block;
-              width: 8px;
-              height: 8px;
-              border-radius: 100%;
-              vertical-align: middle;
-              background: #6ACD5F;
-              margin-right: 3px;
-              position: relative;
-              top:-1px;
-            }
-          }
+        .card{
+          max-width: 320px;
+          margin:0 auto;
+          position: relative;
+          display: block;
         }
       }
     }
@@ -76,16 +60,25 @@
       }
       .card-listing{
         height: auto;
-        li{
+        .ember-view{
+          width: 49%;
+          &:nth-child(3n){
+            margin-right: 1%;
+          }
+          &:nth-child(2n){
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 500px){
+      .card-listing{
+        height: auto;
+        .ember-view{
           width: 100%;
-          display: block;
-          max-width: 550px;
-          margin:0 auto 20px;
-          .contents{
-            font-size: 18px;
-            p{
-              font-size: 18px;
-            }
+          &:nth-child(3n), &:nth-child(2n){
+            margin-right: 0px;
           }
         }
       }

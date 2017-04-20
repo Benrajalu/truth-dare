@@ -13,7 +13,7 @@
       border-radius:100%;
       line-height: 70px;
       box-shadow: 2px 0px 10px rgba(0,0,0,0.1);
-      img{
+      img, svg{
         display: inline-block;
         max-height: 65%;
         margin:0 auto;
@@ -21,6 +21,9 @@
         position: relative;
         top:-2px;
         left:0px;
+        .path{
+          fill:url(#linear);
+        }
       }
     }
     .mobileToggle{
@@ -160,6 +163,9 @@
         }
         &:nth-child(3){
           transition-delay:180ms;
+        }
+        &:nth-child(4){
+          transition-delay:190ms;
         }
       }
       a{

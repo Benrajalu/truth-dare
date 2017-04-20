@@ -13,6 +13,7 @@ Router.map(function() {
   this.authenticatedRoute("fourohFour", { path: "/*path"});
   this.authenticatedRoute('listing');
   this.authenticatedRoute('new-card');
+  this.route('help');
 });
 
 export default Router;

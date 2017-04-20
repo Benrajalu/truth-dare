@@ -1,17 +1,17 @@
 <div id="listing" class="page">
   <div class="visible-content">
     <div id="playfield">
-      <h1>All cards</h1>
+      <h1>Available tasks</h1>
       <div class="controls">
-        {{#link-to "index" class="button tiny"}}Current cards{{/link-to}}
-        {{#link-to "new-card" class="button tiny"}}Add cards{{/link-to}}
+        {{#link-to "index" class="button tiny"}}Current game{{/link-to}}
+        {{#link-to "new-card" class="button tiny"}}Add tasks{{/link-to}}
       </div>
 
       {{#liquid-if currentPlayer class="activeList"}}
-        <h2>Your cards <button class="button tiny" {{action 'toggleList'}}>Check {{user.pairName}}'s list</button></h2>
+        <h2>Your tasks <button class="button tiny" {{action 'toggleList'}}>Check {{user.pairName}}'s list</button></h2>
         {{#dare-list data=myList  filter=user.email removeRights="true" }}{{/dare-list}}
       {{else}}
-        <h2>{{user.pairName}}'s cards <button class="button tiny" {{action 'toggleList'}}>Check {{user.name}}'s list</button></h2>
+        <h2>{{user.pairName}}'s tasks <button class="button tiny" {{action 'toggleList'}}>Check {{user.name}}'s list</button></h2>
         {{#dare-list data=myList  filter=user.pair }}{{/dare-list}}
       {{/liquid-if}}
       {{outlet}}

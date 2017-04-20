@@ -28,6 +28,27 @@ export default function(){
   );
 
   this.transition(
+    this.fromRoute('help'),
+    this.toRoute('new-card'),
+    this.use('toUp', { duration: 350 }),
+    this.reverse('toDown', { duration: 350 })
+  );
+
+  this.transition(
+    this.fromRoute('help'),
+    this.toRoute('index'),
+    this.use('toUp', { duration: 350 }),
+    this.reverse('toDown', { duration: 350 })
+  );
+
+  this.transition(
+    this.fromRoute('help'),
+    this.toRoute('listing'),
+    this.use('toUp', { duration: 350 }),
+    this.reverse('toDown', { duration: 350 })
+  );
+
+  this.transition(
     this.hasClass('activeList'),
     this.toValue(true),
     this.use('toRight', {duration: 250}),
@@ -44,7 +65,7 @@ export default function(){
   this.transition(
     this.hasClass('cardsDance'),
     this.toValue(true),
-    this.use('toLeft', {duration: 250}),
-    this.reverse('toRight', {duration: 250})
+    this.use('toRight', {duration: 250}),
+    this.reverse('toLeft', {duration: 250})
   );
 }
